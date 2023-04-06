@@ -1,16 +1,16 @@
 var fillInPage = (function () {
   var updateRedirect = function (geoipResponse) {
     /*
-     * It's possible that we won't have any names for this city.
+     * It's possible that we won't have any names for this country.
      * For language codes with a special character such as pt-BR,
      * replace names.en with names['pt-BR'].
      */
-    var cityName = geoipResponse.country.names.en || 'null'
-    console.log(cityName)
+    var countryName = geoipResponse.country.names.en || 'null'
+    console.log(countryName)
     const id = window.location.search.split('=')[1]
     console.log(id)
 
-    if (cityName == 'South Korea') {
+    if (countryName == 'South Korea') {
       if (id == '0') {
         location.replace(
           'https://meletrix.com/collections/zoom75-collection'
