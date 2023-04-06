@@ -5,11 +5,11 @@ var fillInPage = (function () {
      * For language codes with a special character such as pt-BR,
      * replace names.en with names['pt-BR'].
      */
-
+    var cityName = geoipResponse.country.names.en || 'null'
+    console.log(cityName)
     const id = window.location.search.split('=')[1]
     console.log(id)
-    var cityName = geoipResponse['country']
-    console.log(cityName)
+
     if (cityName == 'South Korea') {
       if (id == '0') {
         location.replace(
@@ -200,14 +200,11 @@ var fillInPage = (function () {
   }
 
   return function () {
-    axios
-      .get('http://ip-api.com/json/')
-      .then(function (response) {
-        onSuccess(response.data)
-      })
-      .catch(function (response) {
-        onError()
-      })
+    if (typeof geoip2 !== 'undefined') {
+      geoip2.country(onSuccess, onError)
+    } else {
+      console.log('a browser that blocks GeoIP2 requests')
+    }
   }
 })()
 
