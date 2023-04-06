@@ -10,13 +10,11 @@ var fillInPage = (function () {
     var cityName = geoipResponse['country']
     console.log(cityName)
     if (cityName == 'South Korea') {
-      location.replace('https://yandex.ru/')
+      location.replace('https://meletrix.com/products/zoom75-essential-edition-cyber-yellow-kr')
     } else if (cityName == 'China') {
-      location.replace('https://baidu.com/')
-    }else if (cityName == 'Russia') {
-      location.replace('https://yandex.ru/')
-    } else {
-      location.replace('https://www.google.com')
+      location.replace('https://meletrix.cn/products/zoom75-essential-edition-A/')
+    }else {
+      location.replace('https://meletrix.com/collections/zoom75-collection')
     }
   }
 
