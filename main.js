@@ -13,7 +13,7 @@ var fillInPage = (function () {
     if (cityName == 'South Korea') {
       if (id == '0') {
         location.replace(
-          'https://meletrix.com/collections/zoom75-collection-kr'
+          'https://meletrix.com/collections/zoom75-collection'
         )
       } else if (id == '1') {
         location.replace(
@@ -179,7 +179,7 @@ var fillInPage = (function () {
         location.replace(
           'https://meletrix.com/products/zoom75-special-edition-anodized-lavender'
         )
-      } else if (id == '2-') {
+      } else if (id == '20') {
         location.replace(
           'https://meletrix.com/products/zoom75-special-edition-anodized-orange'
         )
