@@ -91,7 +91,7 @@ var fillInPage = (function () {
         location.replace(
           'https://meletrix.com/products/zoom75-special-edition-anodized-lavender'
         )
-      } else if (id == '2-') {
+      } else if (id == '20') {
         location.replace(
           'https://meletrix.com/products/zoom75-special-edition-anodized-orange'
         )
