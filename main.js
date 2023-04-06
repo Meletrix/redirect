@@ -6,16 +6,17 @@ var fillInPage = (function () {
      * replace names.en with names['pt-BR'].
      */
 
-    console.log(geoipResponse)
+    console.log(window.location.search)
     var cityName = geoipResponse['country']
     console.log(cityName)
     if (cityName == 'South Korea') {
       location.replace('https://meletrix.com/products/zoom75-essential-edition-cyber-yellow-kr')
     } else if (cityName == 'China') {
       location.replace('https://meletrix.cn/products/zoom75-essential-edition-A/')
-    }else {
-      location.replace('https://meletrix.com/collections/zoom75-collection')
     }
+    /* else {
+      location.replace('https://meletrix.com/collections/zoom75-collection')
+    } */
   }
 
   var onSuccess = function (geoipResponse) {
