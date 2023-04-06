@@ -197,6 +197,9 @@ var fillInPage = (function () {
 
   var onError = function (error) {
     console.log('onError')
+    location.replace(
+      'https://meletrix.com/'
+    )
   }
 
   return function () {
