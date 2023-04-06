@@ -13,8 +13,10 @@ var fillInPage = (function () {
       location.replace('https://yandex.ru/')
     } else if (cityName == 'China') {
       location.replace('https://baidu.com/')
-    }else if (cityName == 'Germany') {
-      location.replace('https://baidu.com/')
+    }else if (cityName == 'Russia') {
+      location.replace('https://yandex.ru/')
+    } else {
+      location.replace('https://www.google.com')
     }
   }
 
